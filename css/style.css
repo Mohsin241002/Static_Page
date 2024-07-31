@@ -65,19 +65,66 @@ main {
 }
 
 /* Hero Section */
+/* Parallax Effect */
 .hero {
-  color: #ffffff;
-  padding: 4rem 1rem;
+  background: url('./generative-ai-illustration-of-gaming-background-abstract-cyberpunk-style-of-gamer-wallpaper-neon-glow-light-of-scifi-fluorescent-sticks-digitally-generated-image-photo.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
-  background-color: #132350; /* Light Purple */
-  border-bottom: 2px solid #4f439f; /* Light Purple Border */
+  position: relative;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Featured Games */
+/* Parallax Effect */
+.featured-games {
+  background: url('assets/your-featured-games-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(3, 3, 3);
+  text-shadow: 0 0 10px rgba(250, 249, 249, 0.7);
+  padding: 50px 0;
+  position: relative;
+}
+
+.featured-games .container {
+  position: relative;
+  z-index: 2;
+}
+
+.featured-games::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: 1;
 }
 
 .bg-primary{
   background-color: #132350;
 }
 
-/* Featured Games */
+/* Additional styles for existing elements */
 .featured h2 {
   text-align: center;
   margin-bottom: 2rem;
